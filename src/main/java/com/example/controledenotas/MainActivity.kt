@@ -1,6 +1,7 @@
 
 package com.example.controledenotas
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -31,6 +32,17 @@ class MainActivity : AppCompatActivity() {
             val nota2 = nota2EditText.text.toString().toInt()
 
             val media = calcularMedia(nota1, nota2)
+
+            val intent = Intent(this, RelatorioActivity::class.java)
+
+            intent.putExtra("nome", nomeEditText.text.toString())
+            intent.putExtra("nota1", "${nota1}")
+            intent.putExtra("nota2", "${nota2}")
+            intent.putExtra("media ", "${media}")
+            intent.putExtra("situacao" , situacaoAluno(media))
+
+            startActivity(intent)
+
             resultado.text= situacaoAluno(media)
         }
 

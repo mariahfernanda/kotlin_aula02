@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelatorioActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relatório do Aluno"
+        android:textSize="36sp"
+        android:textColor="@color/dark"
+        android:layout_marginBottom="48dp"/>
+
+    <LinearLayout style="@style/campos">
+
+    <TextView
+        android:text="Nome do Aluno:"
+
+        style="@style/label" />
+    <TextView
+        android:id="@+id/nome"
+        style="@style/input" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/campos">
+        <TextView
+            style="@style/campos"
+            android:text="Nota 1"/>
+
+        <TextView style="@style/input"
+            android:id="@+id/nota1"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/campos">
+        <TextView
+            android:text="Nota 2"
+            style="@style/campos" />
+
+        <TextView style="@style/input"
+            android:id="@+id/nota2"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/campos">
+        <TextView
+            android:text="Média"
+            style="@style/campos" />
+
+        <TextView style="@style/input"
+            android:id="@+id/media"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/campos">
+        <TextView
+            android:text="Situação"
+            style="@style/campos" />
+
+        <TextView style="@style/input"
+            android:id="@+id/situacao"/>
+    </LinearLayout>
+
+</LinearLayout>
